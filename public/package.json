@@ -1,0 +1,27 @@
+{
+  "name": "web-development-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apexcharts": "^3.47.0",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "express-session": "^1.18.0",
+    "flowbite": "^2.3.0",
+    "mongodb": "^6.4.0",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "flowbite-typography": "^1.0.3",
+    "tailwindcss": "^3.4.1"
+  }
+}

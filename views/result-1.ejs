@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Details</title>
+
+  <link href="/node_modules/flowbite/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/result_style.css">
+</head>
+
+<body>
+
+
+  <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start rtl:justify-end">
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+            type="button"
+            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+              </path>
+            </svg>
+          </button>
+          <img src="/images/nirma-logo.jpeg" class="h-8 me-3" alt="FlowBite Logo" />
+          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Nirma LMS</span>
+        </div>
+        <div class="flex items-center">
+          <div class="flex items-center ms-3">
+            <div>
+              <button type="button"
+                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                <span class="sr-only">Open user menu</span>
+                <img class="w-8 h-8 rounded-full" src="/images/KHUSH PHOTO.jpg" alt="user photo">
+              </button>
+            </div>
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+              id="dropdown-user">
+              <div class="px-4 py-3" role="none">
+                <p class="text-sm text-gray-900 dark:text-white" role="none">
+                  Khush Patel
+                </p>
+                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                  22bce253@nirmauni.ac.in
+                </p>
+              </div>
+              <ul class="py-1" role="none">
+                <li>
+                  <a href="/login"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem">Sign out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <%- include("partials/header.ejs") %>
+
+    <div class="p-4 sm:ml-64">
+      <div class="p-4 border-2 border-gray-200 bg-blue-100 border-solid rounded-lg dark:border-gray-700 mt-10">
+        <div class="flex items-center justify-center h-24 gap-4 mb-4 shadow rounded-lg bg-white dark:bg-gray-800">
+          <p class="text-2xl text-gray-700 dark:text-gray-500">
+            Result Report : Semester - I
+          </p>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <div class="flex flex-col items-center shadow justify-center h-96 rounded-lg dark:bg-gray-800 bg-white">
+
+            <div class="flex flex-col items-center justify-center p-6">
+              <img class="w-28 h-28 mb-3 rounded-full shadow-lg" src="/images/KHUSH PHOTO.jpg" alt="Bonnie image" />
+              <h5 class="mb-3 text-lg font-medium text-gray-900 dark:text-white">KHUSH PATEL</h5>
+              <span class="text-md text-gray-600 dark:text-gray-500">Roll number : 22BCE253</span>
+              <span class="text-md text-gray-600 dark:text-gray-500">Department : ITNU</span>
+              <span class="text-md text-gray-600 dark:text-gray-500">Branch : CSE</span>
+              <span class="text-md text-gray-600 dark:text-gray-500">Division : D-3</span>
+            </div>
+
+          </div>
+
+
+          <div class="flex col-span-2 justify-center items-center h-96 shadow rounded-lg bg-white dark:bg-gray-800">
+
+            <% if(locals.student){ %>
+              <div class="relative overflow-x-auto">
+
+                <table class="w-full text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                  <thead class="text-md text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                      <th scope="col" class="px-4 py-3">
+                        Subject
+                      </th>
+                      <th scope="col" class="px-4 py-2">
+                        Course Code
+                      </th>
+                      <th scope="col" class="px-4 py-2">
+                        Grade
+                      </th>
+                      <th scope="col" class="px-4 py-2">
+                        Marks Obtained
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white text-sm border-b dark:bg-gray-800 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 text-gray-900 font-medium whitespace-nowrap dark:text-white subject">
+                        <%= student[0].Subject%>
+                      </th>
+                      <td class="px-6 py-4 code">
+                        <%= student[0].Code%>
+                      </td>
+                      <td class="px-6 py-4 grade">
+                        <%= student[0].Grade%>
+                      </td>
+                      <td class="px-6 py-4 marks">
+                        <%= student[0].Marks%>
+                      </td>
+                    </tr>
+                    <tr class="bg-white text-sm border-b dark:bg-gray-800 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 text-gray-900 font-medium whitespace-nowrap dark:text-white subject">
+                        <%= student[1].Subject%>
+                      </th>
+                      <td class="px-6 py-4 code">
+                        <%= student[1].Code%>
+                      </td>
+                      <td class="px-6 py-4 grade">
+                        <%= student[1].Grade%>
+                      </td>
+                      <td class="px-6 py-4 marks">
+                        <%= student[1].Marks%>
+                      </td>
+                    </tr>
+                    <tr class="bg-white text-sm border-b dark:bg-gray-800">
+                      <th scope="row" class="px-6 py-4 text-gray-900 font-medium whitespace-nowrap dark:text-white subject">
+                        <%= student[2].Subject%>
+                      </th>
+                      <td class="px-6 py-4 code">
+                        <%= student[2].Code%>
+                      </td>
+                      <td class="px-6 py-4">
+                        <%= student[2].Grade%>
+                      </td>
+                      <td class="px-6 py-4 marks">
+                        <%= student[2].Marks%>
+                      </td>
+                    </tr>
+                    <tr class="bg-white text-sm border-b dark:bg-gray-800 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 text-gray-900 font-medium whitespace-nowrap dark:text-white subject">
+                        <%= student[3].Subject%>
+                      </th>
+                      <td class="px-6 py-4 code">
+                        <%= student[3].Code%>
+                      </td>
+                      <td class="px-6 py-4">
+                        <%= student[3].Grade%>
+                      </td>
+                      <td class="px-6 py-4 marks">
+                        <%= student[3].Marks%>
+                      </td>
+                    </tr>
+                    <tr class="bg-white text-sm border-b dark:bg-gray-800 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 text-gray-900 font-medium whitespace-nowrap dark:text-white subject">
+                        <%= student[4].Subject%>
+                      </th>
+                      <td class="px-6 py-4 code">
+                        <%= student[4].Code%>
+                      </td>
+                      <td class="px-6 py-4">
+                        <%= student[4].Grade%>
+                      </td>
+                      <td class="px-6 py-4 marks">
+                        <%= student[4].Marks%>
+                      </td>
+                    </tr>
+                    <tr class="bg-white text-sm dark:bg-gray-800 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 text-gray-900 font-medium whitespace-nowrap dark:text-white subject">
+                        <%= student[5].Subject%>
+                      </th>
+                      <td class="px-6 py-4 code">
+                        <%= student[5].Code%>
+                      </td>
+                      <td class="px-6 py-4">
+                        <%= student[5].Grade%>
+                      </td>
+                      <td class="px-6 py-4 marks">
+                        <%= student[5].Marks%>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <% } else{%>
+                <div>Can't find User!!</div>
+                <% } %>
+          </div>
+
+
+        </div>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 ">
+          <div class="flex flex-col w-full px-4 pt-4 pb-4 shadow rounded-lg border-gray-200 dark:border-gray-700 bg-white">
+
+            <div class="flex flex-col w-full border-gray-200 dark:border-gray-700">
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-lg bg-white dark:bg-gray-700 flex items-center justify-center me-3">
+                  <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 19">
+                    <path
+                      d="M14.5 0A3.987 3.987 0 0 0 11 2.1a4.977 4.977 0 0 1 3.9 5.858A3.989 3.989 0 0 0 14.5 0ZM9 13h2a4 4 0 0 1 4 4v2H5v-2a4 4 0 0 1 4-4Z" />
+                    <path
+                      d="M5 19h10v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2ZM5 7a5.008 5.008 0 0 1 4-4.9 3.988 3.988 0 1 0-3.9 5.859A4.974 4.974 0 0 1 5 7Zm5 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm5-1h-.424a5.016 5.016 0 0 1-1.942 2.232A6.007 6.007 0 0 1 17 17h2a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5ZM5.424 9H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h2a6.007 6.007 0 0 1 4.366-5.768A5.016 5.016 0 0 1 5.424 9Z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-lg font-normal text-black dark:text-gray-400">Marks Comparision</p>
+                </div>
+              </div>
+
+              <div id="column-chart1"></div>
+            </div>
+          </div>
+
+
+          <%- include("partials/result.ejs")%>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script>
+      const Marks=document.getElementsByClassName("marks");
+      const options = {
+        colors: ["#FDBA8C"],
+        series: [
+          {
+            name: "Marks",
+            color: "#FDBA8C",
+            data: [
+              { x: "CP", y:Marks[0].innerHTML },
+              { x: "ES", y: Marks[1].innerHTML },
+              { x: "MATHS-I", y: Marks[2].innerHTML },
+              { x: "PHYS", y: Marks[3].innerHTML },
+              { x: "GE", y: Marks[4].innerHTML},
+              { x: "ENV SCI", y: Marks[5].innerHTML },
+            ],
+          },
+        ],
+        chart: {
+          type: "bar",
+          height: "320px",
+          fontFamily: "Inter, sans-serif",
+          toolbar: {
+            show: false,
+          },
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: "70%",
+            borderRadiusApplication: "end",
+            borderRadius: 8,
+          },
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          style: {
+            fontFamily: "Inter, sans-serif",
+          },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "darken",
+              value: 1,
+            },
+          },
+        },
+        stroke: {
+          show: true,
+          width: 0,
+          colors: ["transparent"],
+        },
+        grid: {
+          show: false,
+          strokeDashArray: 4,
+          padding: {
+            left: 2,
+            right: 2,
+            top: -14
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        legend: {
+          show: false,
+        },
+        xaxis: {
+          floating: false,
+          labels: {
+            show: true,
+            style: {
+              fontFamily: "Inter, sans-serif",
+              cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+            }
+          },
+          axisBorder: {
+            show: false,
+          },
+          axisTicks: {
+            show: false,
+          },
+        },
+        yaxis: {
+          show: false,
+        },
+        fill: {
+          opacity: 1,
+        },
+      }
+
+      if (document.getElementById("column-chart1") && typeof ApexCharts !== 'undefined') {
+        const chart = new ApexCharts(document.getElementById("column-chart1"), options);
+        chart.render();
+      }
+    </script>
+</body>
+
+</html>

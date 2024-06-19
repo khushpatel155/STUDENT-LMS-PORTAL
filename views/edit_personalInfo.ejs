@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Information</title>
+    <link href="../node_modules/flowbite/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="/styles/profile_style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start rtl:justify-end">
+                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+                        aria-controls="logo-sidebar" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                            </path>
+                        </svg>
+                    </button>
+                    <img src="/images/nirma-logo.jpeg" class="h-8 me-3" alt="FlowBite Logo" />
+                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Nirma
+                        LMS</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex items-center ms-3">
+                        <div>
+                            <button type="button"
+                                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="w-8 h-8 rounded-full" src="/images/KHUSH PHOTO.jpg" alt="user photo">
+                            </button>
+                        </div>
+                        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                            id="dropdown-user">
+                            <div class="px-4 py-3" role="none">
+                                <p class="text-sm text-gray-900 dark:text-white" role="none">
+                                    Khush Patel
+                                </p>
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                                    22bce253@nirmauni.ac.in
+                                </p>
+                            </div>
+                            <ul class="py-1" role="none">
+                                <li>
+                                    <a href="/login"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                        role="menuitem">Sign out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <%- include("partials/header.ejs") %>
+
+        <div class="p-4 sm:ml-64">
+            <div
+                class="p-4 border-2 shadow-lg border-gray-200 border-dashed bg-blue-100 rounded-lg dark:border-gray-700 mt-14">
+                <section class="bg-white dark:bg-gray-900 rounded-lg">
+                    <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16">
+                        <h2 class="mb-6 text-xl font-bold text-gray-900 dark:text-white">Update Personal Details</h2>
+                        <form action="/editPersonalInfo" method="POST">
+                            <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+                                <div class="sm:col-span-2">
+                                    <label for="FirstName"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
+                                        Name</label>
+                                    <input type="text" name="FirstName" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["FirstName"] %>" placeholder="Name" required="">
+                                </div>
+                                <div class="w-full">
+                                    <label for="LastName"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
+                                        Name</label>
+                                    <input type="text" name="LastName" id="brand"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["LastName"] %>" placeholder="Surname" required="">
+                                </div>
+                                <div class="w-full">
+                                    <label for="MiddleName"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Middle
+                                        Name</label>
+                                    <input type="text" name="MiddleName" id="brand"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["MiddleName"] %>" placeholder="Father Name" required="">
+                                </div>
+                                <div class="w-full">
+                                    <label for="AdharNumber"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Adhar Number
+                                    </label>
+                                    <input type="number" name="AdharNumber" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["AdharNumber"] %>" placeholder="Adhar Number" required="">
+                                </div>
+                                <div class="w-full">
+                                    <label for="Email"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                    <input type="text" name="Email" id="price"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Email"] %>" placeholder="abc@gmail.com" required="">
+                                </div>
+                                <div>
+                                    <label for="Phone"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
+                                    <input type="number" name="Phone" id="price"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Phone"] %>" placeholder="1234567890" required="">
+                                </div>
+                                <div>
+                                    <label for="DOB"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DOB</label>
+                                    <div class="relative max-w-sm">
+                                        <div
+                                            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                            </svg>
+                                        </div>
+                                        <input datepicker datepicker-autohide type="text"
+                                            name="DOB"
+                                            value=<%= student["DOB"] %>
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Select date">
+                                    </div>
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="Gender"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
+                                    <select id="countries" name="Gender"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value=<%= student.Gender %>>Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <h2 class="mb-6 text-xl font-bold text-gray-900 dark:text-white">Address Details</h2>
+
+                            <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+                                <div class="sm:col-span-2">
+                                    <label for="FlatNo"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Flat
+                                        No</label>
+                                    <input type="text" name="FlatNo" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Address"]["FlatNo"] %>" required="">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="Society"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Society</label>
+                                    <input type="text" name="Society" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Address"]["Society"] %>" required="">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="Street"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Street</label>
+                                    <input type="text" name="Street" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Address"]["Street"] %>" required="">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="City"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+                                    <input type="text" name="City" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Address"]["City"] %>" required="">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="Pin"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pincode</label>
+                                    <input type="number" name="Pin" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        value="<%= student["Address"]["Pin"] %>" placeholder="12345 (5 Digits Code)" required="">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="State"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
+                                    <select id="countries" name="State"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value=<%= student["Address"]["State"] %>><%= student["Address"]["State"] %></option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+
+                                    
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="Country"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Country</label>
+                                    <select id="countries" name="Country"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected value=<%= student["Address"]["Country"] %>><%= student["Address"]["Country"] %></option>
+                                        <option value="India">India</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <button type="submit"
+                                    class="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Update
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+        <script src="/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+        <script src="/node_modules/flowbite/dist/datepicker.js"></script>
+</body>
