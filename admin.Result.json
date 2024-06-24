@@ -1,0 +1,153 @@
+[{
+  "_id": "22BCE253",
+  "Username": "22bce253@nirmauni.ac.in",
+  "Result": [
+    {
+      "Semester": "I",
+      "SGPA": 8.3,
+      "CGPA": 8.3,
+      "Report": [
+        {
+          "Subject": "Computer Programming",
+          "Grade": "A",
+          "Marks": "76",
+          "Credits": 3,
+          "Code": " 1CS501"
+        },
+        {
+          "Subject": "Electrical Science",
+          "Grade": "A",
+          "Marks": "74",
+          "Credits": 3,
+          "Code": "1EE801"
+        },
+        {
+          "Subject": " Mathematics I",
+          "Grade": "O",
+          "Marks": "94",
+          "Credits": 3,
+          "Code": "1MH101"
+        },
+        {
+          "Subject": "Physics",
+          "Grade": "B+",
+          "Marks": "67",
+          "Credits": 3,
+          "Code": "1SP201"
+        },
+        {
+          "Subject": "General English",
+          "Grade": "A",
+          "Marks": "77",
+          "Credits": 3,
+          "Code": "1HS101"
+        },
+        {
+          "Subject": "Environmental Science",
+          "Grade": "A",
+          "Marks": "73",
+          "Credits": 3,
+          "Code": "1CL501"
+        }
+      ]
+    },
+    {
+      "Semester": "II",
+      "SGPA": 8.83,
+      "CGPA": 8.54,
+      "Report": [
+        {
+          "Subject": "Introduction to AI&ML",
+          "Grade": "A+",
+          "Marks": "88",
+          "Credits": 3,
+          "Code": "1CS101"
+        },
+        {
+          "Subject": "Chemistry",
+          "Grade": "A+",
+          "Marks": "85",
+          "Credits": 3,
+          "Code": "1SP101"
+        },
+        {
+          "Subject": "Written Communication",
+          "Grade": "A",
+          "Marks": "78",
+          "Credits": 3,
+          "Code": "1HS102"
+        },
+        {
+          "Subject": "Mathematics- II",
+          "Grade": "A+",
+          "Marks": "88",
+          "Credits": 3,
+          "Code": "1MH201"
+        },
+        {
+          "Subject": "Statistics",
+          "Grade": "A+",
+          "Marks": "84",
+          "Credits": 3,
+          "Code": "1MH301"
+        },
+        {
+          "Subject": "Engineering Drawing & Workshop",
+          "Grade": "A+",
+          "Marks": "82",
+          "Credits": 3,
+          "Code": "1ME801"
+        }
+      ]
+    },
+    {
+      "Semester": "III",
+      "SGPA": 8.14,
+      "CGPA": 8.4,
+      "Report": [
+        {
+          "Subject": "Economics",
+          "Grade": "A",
+          "Marks": "73",
+          "Credits": 3,
+          "Code": " 2HS302"
+        },
+        {
+          "Subject": "Data Structures",
+          "Grade": "A+",
+          "Marks": "81",
+          "Credits": 3,
+          "Code": "2CS501"
+        },
+        {
+          "Subject": "Object Oriented Programming",
+          "Grade": "A+",
+          "Marks": "88",
+          "Credits": 3,
+          "Code": "2CS502"
+        },
+        {
+          "Subject": "Digital Electronics",
+          "Marks": 64,
+          "Grade": "B+",
+          "Credits": 3,
+          "Code": "2CS507"
+        },
+        {
+          "Subject": "Mathematical foundations for Computer Science",
+          "Grade": "A",
+          "Marks": "78",
+          "Credits": 3,
+          "Code": "2CS802"
+        },
+        {
+          "Subject": "Indian Constitution and Citizenship",
+          "Grade": "A",
+          "Marks": "73",
+          "Credits": 3,
+          "Code": "1MU803"
+        }
+      ]
+    }
+  ]
+}]

@@ -1,0 +1,43 @@
+[{
+  "_id": "22BCE253",
+  "Name": "Patel Khush Jayeshkumar",
+  "GenInfo": {
+    "Rollno": "22BCE253",
+    "NUemail": "22bce253@nirmauni.ac.in",
+    "Dept": "Institute Of Technology Nirma University",
+    "Branch": "Computer Science and Engineering",
+    "Year": "2nd",
+    "Semester": "IV",
+    "Division": "D",
+    "Batch": 3
+  },
+  "PersonalInfo": {
+    "FirstName": "Khush",
+    "LastName": "Patel",
+    "MiddleName": "Jayeshkumar",
+    "AdharNumber": "427870942563",
+    "Email": "khushjpatel05@gmail.com",
+    "Phone": "7359690398",
+    "DOB": "05/01/2005",
+    "Gender": "Male",
+    "Address": {
+      "FlatNo": "B-404",
+      "Society": "Royal Hights",
+      "Street": "Vaishnovdevi Circle",
+      "City": "Ahemedabad",
+      "Pin": "382421",
+      "State": "Gujarat",
+      "Country": "India"
+    },
+    "Name": "Khush Jayeshkumar Patel"
+  },
+  "BankInfo": {
+    "AccountHolderName": "Khush Jayeshkumar Patel",
+    "AccountNumber": "123456789",
+    "BankName": "Bank Of Baroda",
+    "Branch": "Gota",
+    "IFSC": "ABC123XYZ"
+  },
+  "Password": "22BCE253",
+  "Username": "22bce253@nirmauni.ac.in"
+}]

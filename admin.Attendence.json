@@ -1,0 +1,245 @@
+[{
+  "_id": "22BCE253",
+  "AttendanceReview": [
+    {
+      "Course ID": "1CS201",
+      "Subject": "Data Management System",
+      "Total Lecture": 8,
+      "Present": 7,
+      "Details": [
+        {
+          "Date": "01-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "02-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "08-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "09-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "16-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "17-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "22-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "23-02-2024",
+          "Status": "YES"
+        }
+      ]
+    },
+    {
+      "Course ID": "1CS202",
+      "Subject": "Data Communication",
+      "Total Lecture": 8,
+      "Present": 5,
+      "Details": [
+        {
+          "Date": "06-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "07-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "13-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "14-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "20-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "21-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "27-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "28-02-2024",
+          "Status": "NO"
+        }
+      ]
+    },
+    {
+      "Course ID": "1CS203",
+      "Subject": "Operating System",
+      "Total Lecture": 8,
+      "Present": 6,
+      "Details": [
+        {
+          "Date": "01-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "05-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "08-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "12-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "15-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "22-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "25-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "28-02-2024",
+          "Status": "NO"
+        }
+      ]
+    },
+    {
+      "Course ID": "1CS204",
+      "Subject": "Web Development",
+      "Total Lecture": 8,
+      "Present": 7,
+      "Details": [
+        {
+          "Date": "01-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "06-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "08-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "13-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "15-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "20-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "27-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "29-02-2024",
+          "Status": "YES"
+        }
+      ]
+    },
+    {
+      "Course ID": "1CS205",
+      "Subject": "Computer Architecture",
+      "Total Lecture": 8,
+      "Present": 6,
+      "Details": [
+        {
+          "Date": "01-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "06-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "08-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "15-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "21-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "25-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "27-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "29-02-2024",
+          "Status": "YES"
+        }
+      ]
+    },
+    {
+      "Course ID": "1CS205",
+      "Subject": "Organizational Behaviour",
+      "Total Lecture": 8,
+      "Present": 6,
+      "Details": [
+        {
+          "Date": "01-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "06-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "08-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "15-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "21-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "25-02-2024",
+          "Status": "YES"
+        },
+        {
+          "Date": "27-02-2024",
+          "Status": "NO"
+        },
+        {
+          "Date": "29-02-2024",
+          "Status": "YES"
+        }
+      ]
+    }
+  ]
+}]
